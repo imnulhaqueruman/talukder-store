@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+   width:60%;
+    border-radius: 10px;
+    box-shadow: 5px  grey;
+   
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+.bg-table{
+    background-color: whitesmoke;
+  
+    color:purple;
+    margin-left: 100px;
+}
+ .box{
+     margin-right: 100px;
+ }
