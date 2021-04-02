@@ -16,7 +16,7 @@ const CheckOut = () => {
     const[loggedInUser,setLoggedInUser] = useContext(UserContext)
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://boiling-mesa-24658.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -30,7 +30,7 @@ const CheckOut = () => {
     const orderDetails={...loggedInUser, shipment:productDetails, orderTime: new Date()}
 
     const handleCheckOut = () =>{
-         fetch('http://localhost:5000/addOrder',{
+         fetch('https://boiling-mesa-24658.herokuapp.com/addOrder',{
              method:'POST',
              headers :{
                  'Content-Type' : 'application/json',

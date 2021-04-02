@@ -9,7 +9,7 @@ const AddProduct = () => {
     const[imageURL,setImageURL] = useState(null)
     const[disabled,setDisabled] = useState(true)
     const onSubmit = data =>{
-        const url=`http://localhost:5000/addProduct`;
+        const url=`https://boiling-mesa-24658.herokuapp.com/addProduct`;
         const productData ={
             name:data.name,
             weight:data.weight,

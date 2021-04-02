@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react';
 const EditProduct = () => {
     const [products,setProducts] = useState([])
     useEffect(() =>{
-        fetch('http://localhost:5000/products')
+        fetch('https://boiling-mesa-24658.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
 
     const deleteProduct =  (id) =>{
            console.log(id)
-           fetch(`http://localhost:5000/delete/${id}`,{
+           fetch(`https://boiling-mesa-24658.herokuapp.com/delete/${id}`,{
                method:'DELETE'
 
            })
