@@ -13,6 +13,8 @@ import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Order from './Components/Order/Order';
+import AddminPanel from './Components/AdminPanel/AddminPanel';
+import EditProduct from './Components/EditProduct/EditProduct';
 export const UserContext = createContext()
 function App() {
   const[loggedInUser, setLoggedInUser] = useState({})
@@ -28,11 +30,17 @@ function App() {
           <Route path="/home">
             <Home/>
           </Route>
-          <PrivateRoute path="/addProduct">
-            <AddProduct/>
+          <PrivateRoute path="/adminPanel">
+            <AddminPanel/>
           </PrivateRoute>
           <Route path='/login'>
             <Login></Login>
+          </Route>
+          <PrivateRoute path="/editProduct">
+             <EditProduct></EditProduct>
+          </PrivateRoute>
+          <Route path='/addProduct'>
+            <AddProduct></AddProduct>
           </Route>
           <PrivateRoute path="/CheckOut/:id">
             <CheckOut></CheckOut>

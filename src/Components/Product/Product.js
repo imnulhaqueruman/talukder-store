@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import './Product.css';
 import { useHistory } from 'react-router';
+
 const Product = ({product}) => {
     const history = useHistory()
     const handleClick = (id) =>{

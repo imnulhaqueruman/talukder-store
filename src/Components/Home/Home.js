@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 import Product from '../Product/Product';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             {
                products.map(product => <Product product={product}></Product>) 
             }
+           
         </div>
     );
 };

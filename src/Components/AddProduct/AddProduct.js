@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddProduct.css';
+
+
 const AddProduct = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const[imageURL,setImageURL] = useState(null)
@@ -43,17 +45,20 @@ const AddProduct = () => {
             console.log(error);
           });
     }
+
+
     return (
-        <div>
+        <div className='data'>
            
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form style={{padding:10}} onSubmit={handleSubmit(onSubmit)}>
             <input name="name" defaultValue="test" ref={register} />
             <input name="weight" type="text" defaultValue='4'ref={register} />
             <br/>
             <input name="addPrice" type='text' defaultValue="4" ref={register}/>
             <input name="addPhoto" type="file"  onChange={handleSubmitPhoto}/>
             {errors.exampleRequired && <span>This field is required</span>}
-            <input type="submit" disabled={disabled} />
+            <br/>
+            <input  type="submit" disabled={disabled} />
             </form>
         </div>
     );

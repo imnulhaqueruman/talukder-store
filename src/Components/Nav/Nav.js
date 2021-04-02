@@ -7,28 +7,28 @@ const Nav = () => {
         history.push('/order')
     }
     const adminPanel = () => {
-            history.push('/addProduct');
+            history.push('/adminPanel');
     }
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <h1>Fresh Valley</h1>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid">
+                    <h1 style={{color:'#3949ab'}}>Talukder Store</h1>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                            <Link to="/home">Home</Link>
+                    <div className="collapse navbar-collapse d-flex flex-row-reverse " id="navbarNavDropdown">
+                        <ul className="navbar-nav m-2">
+                            <li className="nav-item p-3">
+                               <Link to="/home">Home</Link>
                             </li>
-                            <li class="nav-item">
-                            <Link onClick={adminPanel} to="/addProduct">AddProduct</Link>
+                            <li className="nav-item p-3">
+                                <Link onClick={adminPanel} to="/adminPanel">AddMinPanel</Link>
                             </li> 
-                            <li class="nav-item">
-                              <Link to="/login"><button>Login</button></Link>
+                            <li className="nav-item p-3">
+                              <Link to="/login"><button class=" btn-success">Login</button></Link>
                             </li> 
-                            <li class="nav-item">
+                            <li className="nav-item p-3">
                               <Link onClick={handleOrder} to="/order">Order</Link>
                             </li> 
 
