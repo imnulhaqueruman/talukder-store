@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 const EditProduct = () => {
     const [products,setProducts] = useState([])
     useEffect(() =>{
@@ -27,6 +26,9 @@ const EditProduct = () => {
 
     return (
         <div>
+            {
+               products.length === 0 &&  <CircularProgress />
+            }
             {
                 products.map(product => <table class="table">
                                             

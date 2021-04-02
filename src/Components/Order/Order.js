@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
 import OrderDetail from '../OrderDetail/OrderDetail';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Order = () => {
     const[orderItem,setOrderItem] = useState([])
@@ -13,7 +14,9 @@ const Order = () => {
     },[])
     return (
         <div className="row m-5">
-         
+           {
+               orderItem.length === 0 &&      <CircularProgress />
+           }
            {
               orderItem.map(item => <OrderDetail item={item}></OrderDetail>)
            }

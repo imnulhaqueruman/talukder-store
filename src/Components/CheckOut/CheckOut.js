@@ -47,7 +47,7 @@ const CheckOut = () => {
 
     }
     return (
-        <div>
+        <div className="col-md col-sm-6">
             <h1 style={{textAlign:'center'}} className='text-success'>CheckOut</h1>
             <table className="bg-table">
                 <tr>

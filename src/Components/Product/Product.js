@@ -12,7 +12,7 @@ const Product = ({product}) => {
         
     }
     return (
-        <div className="col-md-4 p-3 product">
+        <div className="col-md-4 co-sm-12 p-3 product">
             <div className="card" style={{width: '25rem'}}>
                 <img src={product.imageURL} className="card-img-top" alt="..."/>
                 <div className="card-body">

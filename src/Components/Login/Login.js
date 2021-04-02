@@ -38,9 +38,9 @@ const Login = () => {
   });
     }
     return (
-        <div>
-            <h1>This is Google SIgn In </h1>
-            <button onClick={handleGoogleSignIn}>Google Sign in </button>
+        <div style={{marginLeft:100}}>
+            <h1 className='text-primary'> Sign in With Google</h1>
+            <button className="btn btn-primary" onClick={handleGoogleSignIn}>Google Sign in </button>
         </div>
     );
 };
