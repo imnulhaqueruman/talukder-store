@@ -17,8 +17,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import { Link, Route, useHistory } from 'react-router-dom';
 import AddProduct from '../AddProduct/AddProduct';
-import Home from '../Home/Home';
-import EditProduct from '../EditProduct/EditProduct';
+
 
 const drawerWidth = 240;
 
