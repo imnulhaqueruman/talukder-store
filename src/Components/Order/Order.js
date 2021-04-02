@@ -15,7 +15,7 @@ const Order = () => {
     return (
         <div className="row m-5">
            {
-               orderItem.length === 0 &&      <CircularProgress />
+               orderItem.length === 0 &&  <CircularProgress />
            }
            {
               orderItem.map(item => <OrderDetail item={item}></OrderDetail>)
